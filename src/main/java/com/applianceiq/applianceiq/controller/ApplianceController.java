@@ -15,14 +15,6 @@ import java.util.Optional;
 @RequestMapping("/api/appliances")
 @CrossOrigin(origins = "http://localhost:5173")
 public class ApplianceController {
-//    private List<Appliance> appliances = List.of(
-//            new Appliance(1L, "Washer", "/images/washing_machine.png"),
-//            new Appliance(2L, "Dryer", "/images/clothes_dryer.png"),
-//            new Appliance(3L, "Refrigerator", "/images/refrigerator.png"),
-//            new Appliance(4L, "Dishwasher", "/images/dishwasher.png"),
-//            new Appliance(5L, "Range", "/images/range.png"),
-//            new Appliance(6L, "Microwave", "/images/microwave.png")
-//    );
 
     private final ApplianceService applianceService;
 
@@ -69,19 +61,3 @@ public class ApplianceController {
         return ResponseEntity.noContent().build();
     }
 }
-
-//@RestController
-//public class ApplianceController {
-//    @Autowired
-//    private ApplianceService applianceService;
-//
-//    @GetMapping("/api/appliances")
-//    public List<Appliance> getAllAppliances() {
-//        return applianceService.getAllAppliances();
-//    }
-//
-//    @GetMapping("/api/appliances/{id}")
-//    public Optional<Appliance> getApplianceById(@PathVariable Long id) {
-//        return applianceService.getApplianceById(id);
-//    }
-//}

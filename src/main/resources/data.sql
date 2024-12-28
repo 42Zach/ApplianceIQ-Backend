@@ -1,11 +1,3 @@
--- INSERT INTO appliances (name, image) VALUES
--- ('Washer', '/images/washing_machine.png'),
--- ('Dryer', '/images/clothes_dryer.png'),
--- ('Refrigerator', '/images/refrigerator.png'),
--- ('Dishwasher', '/images/dishwasher.png'),
--- ('Range', '/images/range.png'),
--- ('Microwave', '/images/microwave.png');
-
 INSERT INTO appliances (id, name, image)
 SELECT 1, 'Washer', '/images/washing_machine.png'
 WHERE NOT EXISTS (SELECT 1 FROM appliances WHERE id = 1);
