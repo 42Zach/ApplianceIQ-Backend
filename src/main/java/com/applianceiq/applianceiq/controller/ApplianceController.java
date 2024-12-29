@@ -13,6 +13,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/appliances")
+//@CrossOrigin(origins = "https://frolicking-kitsune-3909f0.netlify.app/")
 @CrossOrigin(origins = "http://localhost:5173")
 public class ApplianceController {
 
