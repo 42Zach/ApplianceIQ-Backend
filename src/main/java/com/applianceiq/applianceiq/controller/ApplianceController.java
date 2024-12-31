@@ -13,7 +13,8 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/appliances")
-@CrossOrigin(origins = "https://frolicking-kitsune-3909f0.netlify.app", allowCredentials = "true")
+@CrossOrigin(origins = "https://applianceiq.netlify.app", allowCredentials = "true")
+// Local deployment
 //@CrossOrigin(origins = "http://localhost:5173")
 public class ApplianceController {
 
@@ -48,14 +49,14 @@ public class ApplianceController {
         return ResponseEntity.ok(createdAppliance);
     }
 
-    // PUT: Update an existing appliance
+    // Update existing appliance
     @PutMapping("/{id}")
     public ResponseEntity<Appliance> updateAppliance(@PathVariable Long id, @RequestBody Appliance appliance) {
         Appliance updatedAppliance = applianceService.updateAppliance(id, appliance);
         return ResponseEntity.ok(updatedAppliance);
     }
 
-    // DELETE: Delete an appliance by ID
+    // Delete appliance by ID
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteAppliance(@PathVariable Long id) {
         applianceService.deleteAppliance(id);
